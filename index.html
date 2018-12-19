@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Vue.JS Assignment</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="find_x">
+	<h1>{{title}}</h1>
+	<span>Start Number</span>
+	<input type="text" size="4" v-model="newData.startnum">
+	<span>Multiplier</span>
+	<input type="text" size="4" v-model="newData.multiplier">
+	<span>Qty</span>
+	<input type="text" size="4" v-model="newData.qty">
+	<br><br>
+	<button @click="addData">คำนวณ</button>
+	<ul>
+		<li v-for="result in dataGroup">{{result.values}}</li>
+	</ul>
+</div>
+<hr>
+<div id="find_y">
+	<h1>{{title}}</h1>
+	(<span>Y</span>+<input type="text" size="4" v-model="newData.num1">)+(<input type="text" size="4" v-model="newData.num2">x<input type="text" size="4" v-model="newData.num3">) = <input type="text" size="4" v-model="newData.num4">
+	<h2>Y = {{result}}</h2>
+	<button @click="setY">คำนวณ</button>
+</div>
+<br>
+<hr>
+<div id="find_newx">
+	<h1>{{title}}</h1>
+	<span>Start Number</span>
+	<input type="text" size="4" v-model="newData.startnum">
+	<span>Step</span>
+	<input type="text" size="4" v-model="newData.step">
+	<span>Qty</span>
+	<input type="text" size="4" v-model="newData.qty">
+	<br><br>
+	<button @click="addData">คำนวณ</button>
+	<ul>
+		<li v-for="result in dataGroup">{{result.values}}</li>
+	</ul>
+</div>
+<script src="test.js" charset="utf-8"></script>
+</body>
+</html>
